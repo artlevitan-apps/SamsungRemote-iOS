@@ -1,0 +1,26 @@
+name: SamsungRemote
+options:
+  bundleIdPrefix: com.personalremote
+  deploymentTarget:
+    iOS: '16.0'
+settings:
+  base:
+    SWIFT_VERSION: '5.0'
+    TARGETED_DEVICE_FAMILY: '1'
+    GENERATE_INFOPLIST_FILE: YES
+    INFOPLIST_KEY_NSLocalNetworkUsageDescription: 'Приложение подключается к вашему Samsung TV в домашней сети.'
+    INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents: YES
+    INFOPLIST_KEY_NSAppTransportSecurity_NSAllowsLocalNetworking: YES
+    CODE_SIGNING_ALLOWED: NO
+    IPHONEOS_DEPLOYMENT_TARGET: '16.0'
+targets:
+  SamsungRemote:
+    type: application
+    platform: iOS
+    sources:
+      - path: SamsungRemote
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.personalremote.samsungremote
+        INFOPLIST_KEY_CFBundleDisplayName: 'Samsung Remote'
+        ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS: NO
